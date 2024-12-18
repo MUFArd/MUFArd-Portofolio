@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(28, 27, 27);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.container .mailbox{
+    width: 250px;
+    height: 150px;
+    margin-right: 50px   ;
+}
+
+.container .mailbox .front{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(85, 37, 130), rgb(0, 123, 255), rgb(255, 128, 232));
+    transform: translateY(75px);
+    transition: 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+
+}
+
+.container .mailbox .back{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(255, 128, 232),
+                0 0 20px rgb(255, 128, 232);
+    transform: translateY(-75px);
+    transition: 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+
+.container .mailbox .front i{
+    filter: invert(1);
+}
+.container .mailbox .front:hover{
+    transform: translateY(20px);
+}
+.container .mailbox .front:hover + .back{
+    transform: translateY(0);
+}
