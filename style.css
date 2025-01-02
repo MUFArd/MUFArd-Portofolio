@@ -11,6 +11,7 @@ body {
     margin: 0;
 
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 
 }
 
@@ -74,10 +75,11 @@ nav ul {
 
 nav ul li {
     width: 100%;
-    height: 8VH;
+    height: 6VH;
+    border: 1px black solid;
 }
 
-nav ul li label{
+nav ul li a{
     width: 100%;
     height: 100%;
 
@@ -85,6 +87,12 @@ nav ul li label{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+nav ul li a h2 {
+    color: white;
+    font-size: 1.2vw;
 }
 
 main {
@@ -93,13 +101,108 @@ main {
 }
 
 main .konten {
-    width: 100%;
+    width: 80vw;
     height: 100%;
+
+    position: relative;
+    overflow: hidden;
 }
 
 main .konten iframe {
     width: 100%;
     height: 80%;
-    background-color: aquamarine;
+    z-index: 1;
+}
+
+main .konten .source-code {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+
+    width: 100%;
+    height: 8vh;
+
+    display: flex;
+    gap: 1vw;
+    z-index: 3;
+}
+
+main .konten .source-code a {
+    width: 5vw;
+    height: 4vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px black solid;
+    border-radius: 10px;
+
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+
+    font-size: 1.2vw;
+    z-index: 3;
+}
+
+#html-txt,#css-txt{
+    display: block;
+
+    position: absolute;
+    top: 0;
+    width: 76vw;
+    height: 80vh;
+
+    padding: 6vh 0 0 2vw;
+
+    background-color: white;
+    z-index: 2;
+
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20vh);
+}
+
+#copyhtml,
+#copycss {
+    width: 7vw;
+    height: 4vh;
+
+    position: absolute;
+    right: 3vw;
+
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+}
+
+.html.active ~ #html-txt {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+
+.css.active ~ #css-txt  {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.html.active ~ #html-txt ~ #copyhtml{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.css.active ~ #css-txt ~ #copycss {
+        opacity: 1;
+        visibility: visible;
 }
 

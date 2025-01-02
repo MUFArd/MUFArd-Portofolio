@@ -19,14 +19,25 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <ul>
-            <li><label for="menuradio"><h3>Konten1 - MenuRadio</h3></label></li>
+            <li><a href="#menuradio"><h2>Konten1 - MenuRadio</h2></a></li>
+            <li><a href="#menuradio"><h2>Konten2 - MenuRadio</h2></a></li>
+            <li><a href="#menuradio"><h2>Konten3 - MenuRadio</h2></a></li>
+            <li><a href="#menuradio"><h2>Konten4 - MenuRadio</h2></a></li>
         </ul>
     </nav>
     <main>
-        <input type="checkbox" name="menuradio" id="" hidden>
         <div class="konten" id="menuradio">
-            <iframe src="./MenuRadio/index.html" frameborder="0"></iframe>
+            <iframe src="./MenuRadio/index.html" frameborder="0" id="isi-konten"></iframe>
+            <div class="source-code">
+                <a href="#" class="html">#html</a>
+                <a href="#" class="css">#css</a>
+                <iframe src="./MenuRadio/html.txt" frameborder="0" id="html-txt"></iframe> 
+                <iframe src="./MenuRadio/style.css" frameborder="0" id="css-txt"></iframe> 
+                <button onclick="copyIframeText('html-txt')" id="copyhtml">Copy HTML</button>
+                <button onclick="copyIframeText('css-txt')" id="copycss">Copy CSS</button>
+            </div>
         </div>
     </main>
 </body>
+<script src="script.js"></script>
 </html>
