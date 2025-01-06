@@ -11,11 +11,12 @@ body  {
 }
 
 
-nav {
+header {
     width: 100vw;
     height: 8vh;
 
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(29, 29, 29);
+    border-bottom: 0.5px gray solid;
     color: white;
 
     display: flex;
