@@ -7,11 +7,15 @@ body  {
     width: 100vw;
     height: 100vh;
     font-family: "Poppins",sans-serif;
-    overflow: hidden;
+    overflow-x: none;
 
     background-color: rgb(29, 29, 29);
     color: white;
 
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -25,6 +29,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: fixed;
+    z-index: 10;
 }
 
 .logo {
@@ -48,16 +55,19 @@ header {
 
 .greeting {
     width: 100vw;
-    height: 25vh;
+    height: 45vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
 }
 
 .greeting h2 {
+    margin-top: 8vh;
     font-size: 2vw;
 
 }
@@ -105,54 +115,21 @@ header {
 }
 
 main {
-    width: 989vw;
-    height: 70vh;
-
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2vw;
-    margin: 0 0.5vw;
+    justify-content: center;
+
 }
 
-main .konten{
+main .kotak-konten{
     display: flex;
-    flex-direction: column;
 
-    width: 23vw;
-    height: 30vh;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    border: 1px gray solid;
+    width: 98%;
+    height: 90%;
+
+    border: 1px solid gray;
+
+
 }
 
-main .konten iframe{
-    width: 100%;
-    height: 85%;
-
-    background-color: rgb(34, 34, 34);
-
-    box-sizing: border-box;
-    overflow: hidden;
-}
-main .konten a{
-    width: 100%;
-    height: 15%;
-
-    display: flex;
-    align-items: center;
-
-    color: white;
-
-    font-size: 1.2vw;
-    font-weight: 700;
-    text-decoration: none;
-
-    margin-left: 1vw;
-
-    transition: all 0.3s ease-in-out;
-}
-
-main .konten a:hover {
-    color: gray;
-}
