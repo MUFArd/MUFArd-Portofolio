@@ -35,6 +35,7 @@ header {
 }
 
 .logo {
+    flex: 1;
     display: flex;
     align-items: center;
     gap: 1vw;
@@ -50,7 +51,28 @@ header {
 }
 
 .logo h2 {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+    background: linear-gradient(45deg,rgb(16, 100, 255),rgb(138, 166, 245),rgb(237, 237, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+nav {
+    flex: 2;
+}
+
+nav ul {
+    display: flex;
+    gap: 2vw;
+    background-color:aqua ;
+}
+
+nav ul li {
+    flex: 1
+}
+
+.Login {
+    flex: 1;
 }
 
 .greeting {
@@ -113,67 +135,4 @@ header {
 
 
 }
-
-main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-
-}
-
-.kotak-konten {
-    width: 97%;
-    height: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    border: 1px gray solid;
-    padding: 0 1vw;
-    gap: 2vw;
-    
-}
-
-.konten {
-    margin-top: 2vh;
-    width: 23%;
-    height: 45%;
-    background-color: rgb(41, 41, 41);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.konten iframe {
-    width: 100%;
-    height: 85%;
-}
-
-.konten:nth-child(3) iframe {
-    background-color: white;
-}
-
-.konten iframe::-webkit-scrollbar {
-    display: none;
-}
-
-.konten a {
-    font-size: 1.2vw;
-    font-weight: 600;
-    text-decoration: none;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    text-indent: 1vw;
-    background-color: black;
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-
-.konten a:hover {
-    color: gray;
-}
-
 
