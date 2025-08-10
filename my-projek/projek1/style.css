@@ -109,7 +109,7 @@ nav ul li .links li a:hover {
     background-color: gray;
 }
 
-main {
+#home {
     background-image: url(https://anekatempatwisata.com/wp-content/uploads/2017/06/Candi-Borobudur-Magelang.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -124,7 +124,7 @@ main {
 
 }
 
-main h1 {
+#home h1 {
     font-size: 3vw;
     color: white;
 
@@ -132,10 +132,10 @@ main h1 {
 
 }
 
-main p {
+#home p {
     margin-top: 2vh;
 
-    font-size: 1.5vw;
+    font-size: 1.vw;
     opacity: 0.8;
     color: white;
 }
@@ -168,6 +168,23 @@ body > div .text h1{
 body > div .text p {
     margin: 1vh 0 3vh 0;
     text-indent: 2vw;
+}
+
+body > div .text a {
+    padding: 1vh 1vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(39, 104, 255);
+    transition: all 0.3s ease-in-out ;
+}
+
+body > div .text a:hover {
+    color: rgba(39, 104, 255);
+    border: 1px rgba(39, 104, 255) solid;
+    background-color: white;
 }
 
 
