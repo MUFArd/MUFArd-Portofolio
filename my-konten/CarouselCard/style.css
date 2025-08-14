@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: rgb(58, 58, 58);
+}
+
+.carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.carousel-card {
+    width: 190px;
+    height: 250px;
+    background-color:rgb(24, 25, 26);
+    box-shadow: 0 4px 15px rgba(0, 0, 0);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    left: 0;
+}
+
+.carousel-card:not(:first-child) {
+    margin-left: -80px;
+}
+
+.carousel-card:hover {
+    transform: translateY(-20px);
+    transition: 0.5s ease-out;
+    background-color: rgb(65, 65, 65);
+}
+
+.carousel-card:hover ~ .carousel-card {
+    position: relative;
+    left: 50px;
+    transition: 0.3s ease-out;
+}
+
+.carousel-card h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
